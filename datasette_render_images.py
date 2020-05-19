@@ -9,8 +9,8 @@ def render_cell(value):
     # Only act on byte columns
     if not isinstance(value, bytes):
         return None
-    # Only render images < 100kb
-    if len(value) > 100 * 1024:
+    # Only render images < 250kb
+    if len(value) > 250 * 1024:
         return None
     # Is this an image?
     image_type = imghdr.what(None, h=value)
